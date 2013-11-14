@@ -50,7 +50,7 @@ void loop() // run over and over
   // BLEBee byte per byte. there is no longer a buffer involved.
   if (Serial.available()) {
     int ch = Serial.read();
-    Serial.print(ch);
+    Serial.write(ch);
     Serial1.write(ch);
   }
   
