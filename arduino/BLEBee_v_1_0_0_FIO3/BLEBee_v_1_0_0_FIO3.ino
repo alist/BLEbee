@@ -29,6 +29,7 @@
 void setup()   {
   // Set the baudrate of the Arduino
   Serial.begin(9600);
+  delay(1000);
   Serial.print("BLEbee v1.0.0 Sketch setup...");
 
   // Set the data rate for the Serial1 where the BLEbee is connected to
@@ -52,7 +53,7 @@ void loop() // run over and over
     Serial.print(ch);
     Serial1.write(ch);
   }
-
+  
   // Wait for data send from the iPhone and print it to the serial console.
   // That's it. Quite simple.
   if (Serial1.available()) {
